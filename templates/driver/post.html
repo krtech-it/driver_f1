@@ -1,0 +1,9 @@
+{% extends "driver/base.html" %}
+
+{% block content %}
+	<h1>{{post.title}}</h1>
+	{% if post.photo %}
+		<p><img class="img-article-left" src="{{post.photo.url}}" alt=""></p>
+	{% endif %}
+	<p>{{post.content|linebreaks}}</p>
+{% endblock content %}
